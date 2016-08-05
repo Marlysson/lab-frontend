@@ -1,5 +1,5 @@
-###Repositório que conterá alguns clones de algumas interfaces de sites e aplicativos famosos para testar as habilidades front-end.
+###Repositório que conterá alguns experimentos de frontend tanto de interface quanto aleatórios para testar habilidades front-end.
 
-Visualizar interfaces online
+####Visualizar interfaces online
 
-- [WhatsApp](http://marlysson.github.io/FrontEnd-Learning/WhatsApp/)
+- [WhatsApp](http://marlysson.github.io/Frontend-Learning/WhatsApp/)
