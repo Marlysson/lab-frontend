@@ -1,8 +1,8 @@
 @font-face {
 	font-family : "Roboto";
-	src:url("fonts/Roboto-Bold.ttf");
-	src:url("fonts/Roboto-Light.ttf");
-	src:url("fonts/Roboto-Bold.ttf");
+	src:url("../fonts/Roboto-Bold.ttf");
+	src:url("../fonts/Roboto-Light.ttf");
+	src:url("../fonts/Roboto-Bold.ttf");
 }
 :root{
 	--background_body : #3498db;
