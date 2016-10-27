@@ -1,7 +1,10 @@
 ##Interface de exemplo para algumas estatísticas de grupo do mensageiro Slack
 
-Link para acesso online :
+> Possui uma animação na contagem das estatísticas
 
+###Link para acesso online :
+
+[Slack-statistics](http://marlysson.github.io/Frontend-Learning/Slack-statistics/)
 
 ## Interfaces
 
