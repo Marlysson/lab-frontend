@@ -3,3 +3,4 @@
 ####Visualizar interfaces online
 
 - [WhatsApp](http://marlysson.github.io/Frontend-Learning/WhatsApp/)
+- [Slack Statistics](http://marlysson.github.io/Frontend-Learning/Slack-statistics/)
