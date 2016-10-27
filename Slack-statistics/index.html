@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Statistics Slack</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+
+<div class='center-text'>
+	<h1 class="highlight-text">Statistics Slack</h1>
+</div>
+
+<div class="info-team center-block center-text">
+
+	<h2>Slack team</h2>
+	<h3 class="team-title">Python Brasil - Developers</h3>
+
+</div>
+
+<div class="statistics center-block">
+	
+	<div class="item-statistics center-text" data-type="today">
+		<p class="data-number">12</p>
+		<p class="data-description">Messages sent today</p>
+	</div>
+	
+	<div class="item-statistics center-text" data-type="yesterday">
+		<p class="data-number">33</p>
+		<p class="data-description">Messages sent yesterday
+		</p>
+		<p class="data-related highlight-text">It's 70% more than yesterday!</p>
+	</div>
+
+	<div class="item-statistics center-text" data-type="talkative">
+		<p class="data-number">44</p>
+		<p class="data-description">Messages talkative user today</p>
+		<p class="data-related highlight-text">Marlysson da Silva</p>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	let contagem = function(max,element){
+
+		let contador = 0;
+
+		let count_up = setInterval(function(){
+			
+			if (contador < parseInt(max)){
+
+				if ( (max - contador) < 10){
+					contador += (max - contador);
+				}else{
+					contador += 10;	
+				}
+
+				element.textContent = contador;
+
+			}else{
+				clearInterval(count_up);
+			}
+
+		},90);
+
+	}
+
+	const numbers = document.querySelectorAll('.data-number');
+
+	//Refactor to one "function lib like" using objects
+    contagem(numbers[0].textContent,numbers[0]);
+	contagem(numbers[1].textContent,numbers[1]);
+	contagem(numbers[2].textContent,numbers[2]);
+
+</script>
+
+</body>
+</html>

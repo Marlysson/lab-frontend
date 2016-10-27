@@ -1,0 +1,1 @@
+## Interface de exemplo para estatísticas de grupo do Slack App
