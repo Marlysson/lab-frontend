@@ -1,0 +1,176 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*MATÉRIAS*/
+
+.eng-soft{
+	background: #3498db;
+}
+
+.ihc{
+	background:#1abc9c;
+}
+
+.proj-bd{
+	background:#e67e22;
+}
+
+.prog-int{
+	background:#2c3e50;
+}
+
+.me-cient{
+	background:#9b59b6;
+}
+
+.action{
+	width:20px;
+	height:20px;
+	text-align: center;
+	color:white;
+	font-weight:bold;
+	font-size:15px;
+	border-radius:100%;
+	background:#34495e;
+	position:absolute;
+	z-index:2;
+	
+}
+
+.close{
+	width:20px;
+	height:20px;
+	text-align: center;
+	color:white;
+	font-weight:bold;
+	font-size:15px;
+	border-radius:100%;
+	background:#34495e;
+	position:absolute;
+	z-index:2;
+	right:-5px;
+	top:-5px;
+}
+
+.notificacoes{
+	width:95%;
+	position:relative;
+	margin-top:20px;
+	margin-left:-100%;
+	height:auto;
+	transition:0.5s all;
+}
+
+.notificacoes:before{
+	content:"";
+	display:block;
+	width:2px;
+	height:95%;
+	position:absolute;
+	left:15px;
+	background:#ccc;
+}
+
+.show-notificacao{
+	margin-left:0;
+}
+
+.item-notificacao{
+	display: block;
+	overflow:auto;
+	background:#fff;
+	box-shadow:1px 2px #ccc;
+	margin-bottom:10px;
+	border:1px solid #ccc;
+	position:relative;
+}
+
+.titulo-notificacao , .conteudo-notificacao{
+	padding-left:35px;
+}
+
+.titulo-notificacao{
+	padding-right:20px;
+	font-size:13px;
+	padding-top:10px;
+	font-weight: 500;
+}
+
+.conteudo-notificacao{
+	font-size:13px;
+	padding-top:2px;
+	text-align: justify;
+	padding-right:5px;
+	padding-bottom:5px;
+}
+
+
+.icon-color{
+	display: inline-block;
+	width:15px;
+	height:15px;
+	border-radius:100%;
+	float:left;
+	position:absolute;
+	top:50%;
+	margin-top:-7.5px;
+	margin-left:8px;
+	clear:left;
+}
+
+/*.icon-color:after{
+	content:"";
+	width:2px;
+	height:30px;
+	background:#ccc;
+	position:absolute;
+	right:-7px;
+	top:-8px;
+}*/
+
+.destaque{
+	font-weight: bold;
+	color:#e74c3c;
+	border:1px solid #7f8c8d;
+	padding:2px 5px;
+	display: inline-block;
+}
+
+.data-postagem{
+	font-weight: 500;
+	font-size:12px;
+	color:#95a5a6;
+	padding-top:2px;
+	text-align: justify;
+	padding-left:35px;
+	/*padding-right:7px;*/
+	/*float:right;*/
+	padding-bottom:5px;
+}
+
+@media screen and (min-width: 600px){
+	.notificacoes{
+		width:50%;
+		margin-right:-110%;
+		margin-left:unset;
+		float:right;
+	}
+
+	.close{
+		left:-5px;
+		top:-10px;
+	}
+
+	.show-notificacao{
+		margin-right:0px;
+	}
+}
+
+@media screen and (min-width: 800px){
+	.notificacoes{
+		width:30%;
+	}
+}
