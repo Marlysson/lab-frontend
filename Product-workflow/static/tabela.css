@@ -1,0 +1,60 @@
+.product-list{
+	width:90%;
+	margin:20px auto;
+	border-collapse:collapse;
+}
+
+.column-options{
+	display: flex;
+	justify-content: space-around;
+}
+
+.table-header td{
+	font-weight: 500;
+	color:#5b6a6b;
+	text-align: left;
+	cursor:pointer;
+	padding-bottom:10px;
+	position: relative;
+}
+
+.product-item td:first-child{
+	padding-left:15px;
+}
+
+.product-item td:last-child , .table-header td:last-child{
+	text-align:center;
+}
+
+.product-item{
+	transition:0.3s;
+}
+.product-item:hover , .product-item-selected{
+	background:#f3f3f3;
+	cursor:pointer;
+}
+
+.table-header td:after{
+	/* Criando triângulo com css , pois usando icones quebrava o layout e possuiam um tamanho definido */
+	content:"";
+	width:0;
+	position:absolute;
+	bottom:10px;
+	margin-left:3px;
+	border-top:5px solid #7f8c8d;
+	border-left:5px solid transparent;
+	border-bottom:5px solid transparent;
+	border-right:5px solid transparent;
+}
+
+.table-header td:last-child:after , .table-header td:first-child:after{
+	display: none; /* Removendo triângulo criado do primeiro e do último "td" , deixando somente nos textos.*/
+}
+
+.product-item td{
+	padding:8px 0;
+	text-align: left;
+	color:#7f8c8d;
+	letter-spacing: -1px;
+	font-size:16px;
+}

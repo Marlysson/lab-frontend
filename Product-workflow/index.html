@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Product workflow</title>
+	<link rel="stylesheet" type="text/css" href="static/geral.css">
+	<link rel="stylesheet" type="text/css" href="static/tabela.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.css">
+	
+</head>
+<body>
+
+<div class="container-produtos">
+	<div class="titulo-container">LISTA DE PRODUTOS</div>
+
+	<div class="container-inputs">
+
+		<div class="container-search">
+			<div data-icon="ei-search" data-size="s" class="icon-search"></div>
+			<input type="text" name="" class="input-search">
+		</div>
+
+		<div class="container-add">
+			<button class="btn btn-medium">Adicionar produto</button>
+		</div>
+
+	</div>
+
+	<span class="divisor"></span>
+
+	<table class="product-list">
+
+		<thead class="table-header">
+			<tr>
+				<td></td>
+				<td>Produto</td>
+				<td>Categoria </td>
+				<td>Preço </td>
+				<td>Validade </td>
+				<td>Ações</td>
+			</tr>
+		</thead>
+
+		<tbody class="table-content">
+			<tr class="product-item">
+				<td>
+					<input type="checkbox" name="" id="checkbox">
+				</td>
+
+				<td>Copo Plástico</td>
+				<td>Cozinha</td>
+				<td>R$ 0.30</td>
+				<td>09/08/2018</td>
+
+				<td class="column-options">
+					<div data-icon="ei-pencil" data-size="s"></div>
+					<div data-icon="ei-eye" data-size="s"></div>
+					<div data-icon="ei-trash" data-size="s"></div>
+				</td>
+
+			</tr>
+
+			<tr class="product-item">
+				<td><input type="checkbox" name=""></td>
+				<td>Caneta</td>
+				<td>Papelaria</td>
+				<td>R$ 1,20</td>
+				<td>10/12/2042</td>
+
+				<td class="column-options">
+					<div data-icon="ei-pencil" data-size="s"></div>
+					<div data-icon="ei-eye" data-size="s"></div>
+					<div data-icon="ei-trash" data-size="s"></div>
+				</td>
+			</tr>
+
+			<tr class="product-item">
+				<td><input type="checkbox" name=""></td>
+				<td>Papel A4</td>
+				<td>Papelaria</td>
+				<td>R$ 20,00</td>
+				<td>01/01/2050</td>
+
+				<td class="column-options">
+					<div data-icon="ei-pencil" data-size="s"></div>
+					<div data-icon="ei-eye" data-size="s"></div>
+					<div data-icon="ei-trash" data-size="s"></div>
+				</td>
+			</tr>
+
+		</tbody>
+
+	</table>
+
+	<footer class="container-footer">
+		<span class="indicador-acoes">Ações em massa</span>
+
+		<span class="contador-dados">Mostrando 3 de 43 registros</span>
+
+		<ul class="paginacao">
+			<li class="numero-pagina current-page">1</li>
+			<li class="numero-pagina">2</li>
+			<li class="numero-pagina">3</li>
+			<li class="numero-pagina">4</li>
+			<li class="numero-pagina">5</li>
+
+			<div data-icon="ei-chevron-right" data-size="s"></div>
+
+		</div>
+	</footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
+<script type="text/javascript">
+
+	checkbox = document.querySelectorAll("input[type=checkbox");
+
+	checkbox.forEach(function(value,index){
+
+		value.addEventListener("click",function(event){
+			row = this.parentNode.parentNode;
+			row.classList.toggle("product-item-selected");
+		});
+
+	});
+
+</script>
+
+
+<script type="text/javascript">
+	valor_padrao = "Buscar";
+
+	search = document.querySelector(".input-search");
+	search.value = valor_padrao;
+
+	search.addEventListener("click",function(event){
+		if (this.value === valor_padrao){
+			this.value = '';
+		}
+	});
+
+	search.addEventListener("focusout",function(){
+		if (this.value === ''){
+			this.value = valor_padrao;
+		}
+	});
+</script>
+
+</body>
+</html>
