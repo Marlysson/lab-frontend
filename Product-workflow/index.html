@@ -138,16 +138,19 @@
 			</tr>
 		</thead>
 
-		<tbody class="table-content">
-			<tr class="product-item">
+		<tbody class="table-content" id="product-list">
+
+			<tr class="product-item" v-for="produto in produtos">
+
 				<td>
 					<input type="checkbox" name="" id="checkbox">
 				</td>
 
-				<td>Copo Plástico</td>
-				<td>Cozinha</td>
-				<td>R$ 0.30</td>
-				<td>09/08/2018</td>
+				<td>{{produto.nome}}</td>
+				<td>{{produto.categoria}}</td>
+				<td>R$ {{produto.valor}}</td>
+				<td>{{produto.validade}}</td>
+
 
 				<td class="column-options">
 
@@ -155,8 +158,8 @@
 						<div data-icon="ei-pencil" data-size="s"></div>
 					</div>
 
-					<div class="show_produto_js"">
-						<div data-icon="ei-eye" data-size="s" ></div>	
+					<div class="show_produto_js">
+						<div data-icon="ei-eye" data-size="s"></div>	
 					</div>
 
 					<div class="deleta_produto_js">
@@ -165,50 +168,6 @@
 					
 				</td>
 
-			</tr>
-
-			<tr class="product-item">
-				<td><input type="checkbox" name=""></td>
-				<td>Caneta</td>
-				<td>Papelaria</td>
-				<td>R$ 1.20</td>
-				<td>10/12/2042</td>
-
-				<td class="column-options">
-					<div class="edita_product_js">
-						<div data-icon="ei-pencil" data-size="s"></div>
-					</div>
-
-					<div class="show_produto_js"">
-						<div data-icon="ei-eye" data-size="s" ></div>	
-					</div>
-
-					<div class="deleta_produto_js">
-						<div data-icon="ei-trash" data-size="s"></div>	
-					</div>
-				</td>
-			</tr>
-
-			<tr class="product-item">
-				<td><input type="checkbox" name=""></td>
-				<td>Papel A4</td>
-				<td>Papelaria</td>
-				<td>R$ 20.00</td>
-				<td>01/01/2050</td>
-
-				<td class="column-options">
-					<div class="edita_product_js">
-						<div data-icon="ei-pencil" data-size="s"></div>
-					</div>
-
-					<div class="show_produto_js"">
-						<div data-icon="ei-eye" data-size="s"></div>	
-					</div>
-
-					<div class="deleta_produto_js">
-						<div data-icon="ei-trash" data-size="s"></div>	
-					</div>
-				</td>
 			</tr>
 
 		</tbody>
@@ -233,6 +192,8 @@
 
 </div>
 
+<script type="text/javascript" src="static/javascript/vue.js"></script>
+<script type="text/javascript" src="static/javascript/handle_produtos.js"></script>
 <script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
 
 <script type="text/javascript" src="static/javascript/select-row-table.js"></script>
