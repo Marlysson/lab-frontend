@@ -50,7 +50,7 @@ body{
 	align-items: center;
 }
 
-.icon-search{
+.icon-align{
 	margin-top:-5px;
 	margin-left:10px;
 }
@@ -228,4 +228,54 @@ body{
 	width:50%;
 	height:100%;
 	float:right;
+}
+
+.item-detalhe:first-of-type{
+	margin-top:50px;
+}
+
+.item-detalhe{
+	width:90%;
+	height:55px;
+	margin:30px auto 0;
+}
+
+.icon-detalhe{
+	width:25%;
+	height:100%;
+	border-right:3px solid #e3eefa;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	float:left;
+}
+
+.infos-produto{
+	float:right;
+	width:70%;
+}
+
+.titulo-informacao , .valor-informacao{
+	padding-left:0px;
+}
+
+.titulo-informacao{
+	color:#bbbbbb;
+	font-size:15px;
+	margin-top:5px;
+}
+
+.valor-informacao{
+	font-size:23px;
+	color:#152e4b;
+	font-weight: 500;
+}
+
+
+.icon-detalhe img{
+	width:50%;
+	height:50%;
+	margin-right:10px;
 }
