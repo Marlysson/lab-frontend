@@ -1,0 +1,31 @@
+
+.form{
+	width:80%;
+	height: auto;
+	margin:30px auto 0;
+}
+
+.item-form{
+	height:40px;
+	margin-bottom:20px;
+}
+
+.item-form , .input-form{
+	border-bottom:2px solid #e3eefa;
+}
+
+.item-form img{
+	margin-left:15px;
+}
+
+.input-form{
+	padding:5px 10px;
+	height:65%;
+	width:80%;
+	font-size:17px;
+	border:0;
+}
+
+.input-form:focus{
+	outline:none;
+}

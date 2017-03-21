@@ -4,8 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Product workflow</title>
-	<link rel="stylesheet" type="text/css" href="static/geral.css">
-	<link rel="stylesheet" type="text/css" href="static/tabela.css">
+	<link rel="stylesheet" type="text/css" href="static/css/geral.css">
+	<link rel="stylesheet" type="text/css" href="static/css/tabela.css">
+	<link rel="stylesheet" type="text/css" href="static/css/formulario.css">
+
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.css">
 	
@@ -16,11 +18,34 @@
 	<h1 class="titulo-container">CADASTRAR PRODUTO</h1>
 
 	<div class="icon-close">
-		<div data-icon="ei-close-o" data-size="s"></div>	
+		<div data-icon="ei-close-o" data-size="m"></div>	
 	</div>
-	
-</div>
 
+	<form class="form">
+		<div class="item-form">
+			<input type="" name="" class="input-form" placeholder="produto">
+			<img src="static/images/produto.png">
+		</div>
+
+		<div class="item-form">
+			<input type="" name="" class="input-form" placeholder="preço">
+			<img src="static/images/preco.png">
+		</div>
+
+		<div class="item-form">
+			<input type="" name="" class="input-form" placeholder="validade">
+			<img src="static/images/validade.png">
+		</div>
+
+		<div class="item-form">
+			<input type="" name="" class="input-form" placeholder="categoria">
+			<div data-icon="ei-chevron-down" data-size="s" class="icon-search"></div>
+		</div>
+
+		<button class="btn btn-large">Cadastrar</button>
+
+	</form>
+</div>
 
 <div class="container-produtos">
 	<h1 class="titulo-container">LISTA DE PRODUTOS</h1>
@@ -29,7 +54,7 @@
 
 		<div class="container-search">
 			<div data-icon="ei-search" data-size="s" class="icon-search"></div>
-			<input type="text" name="" class="input-search">
+			<input type="text" name="" class="input-search" placeholder="Buscar">
 		</div>
 
 		<div class="container-add">
@@ -125,59 +150,11 @@
 
 <script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
 
-<script type="text/javascript">
-
-	checkbox = document.querySelectorAll("input[type=checkbox");
-
-	checkbox.forEach(function(value,index){
-
-		value.addEventListener("click",function(event){
-			row = this.parentNode.parentNode;
-			row.classList.toggle("product-item-selected");
-		});
-
-	});
-
-</script>
-
-
-<script type="text/javascript">
-	valor_padrao = "Buscar";
-
-	search = document.querySelector(".input-search");
-	search.value = valor_padrao;
-
-	search.addEventListener("click",function(event){
-		if (this.value === valor_padrao){
-			this.value = '';
-		}
-	});
-
-	search.addEventListener("focusout",function(){
-		if (this.value === ''){
-			this.value = valor_padrao;
-		}
-	});
-</script>
-
-<script type="text/javascript">
+<script type="text/javascript" src="static/javascript/select-row-table.js"></script>
+<script type="text/javascript" src="static/javascript/placeholder-search.js"></script>
+<script type="text/javascript" src="static/javascript/handle_modal.js">
 	
-	btn_add = document.querySelector(".add-product-js");
-	modal = document.querySelector(".modal-item");
-
-	btn_add.addEventListener("click",function(event){
-		modal.classList.add("modal-visible");
-	});
-
 </script>
 
-<script type="text/javascript">
-	icon_close = document.querySelector(".icon-close");
-	modal = document.querySelector(".modal-item");
-
-	icon_close.addEventListener("click",function(event){
-		modal.classList.remove("modal-visible");
-	})
-</script>
 </body>
 </html>

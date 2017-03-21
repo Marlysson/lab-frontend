@@ -90,6 +90,14 @@ body{
 	padding:13px 10px;
 }
 
+.btn-large{
+	border-radius:3px;
+	font-size:17px;
+	font-weight: lighter;
+	padding:15px 30px;
+	width:100%;
+}
+
 .container-footer{
 	width:90%;
 	margin:10px auto;
@@ -153,8 +161,9 @@ body{
 }
 
 .modal-item{
-	width:400px;
-	height:400px;
+	width:450px;
+	height:auto;
+	padding-bottom:40px;
 	background:white;
 	position:absolute;
 	top:-400px;
@@ -170,19 +179,17 @@ body{
 }
 
 .icon-close{
-	width:25px;
-	height:25px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width:30px;
+	height:30px;
 	background:white;
 	border-radius:100%;
 	position:absolute;
 	top:-10px;
 	right:-10px;
 	cursor:pointer;
-}
-
-.form{
-	width:90%;
-	height: auto;
-	margin:0 auto;
-	border:1px solid #000;
 }
