@@ -14,7 +14,8 @@ body{
 .container-produtos{
 	margin:110px auto;
 	width:900px;
-	height:400px;
+	height:auto;
+	padding-bottom:10px;
 	background:white;
 }
 
@@ -168,6 +169,8 @@ body{
 	height:auto;
 	background:white;
 	position:absolute;
+	left:50%;
+	margin-left:-225px;
 	top:-400px;
 	z-index:100;
 	box-shadow:0px 0px 2px #7f8c8d;

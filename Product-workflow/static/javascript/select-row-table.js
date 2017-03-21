@@ -4,6 +4,7 @@ checkbox = document.querySelectorAll("input[type=checkbox");
 
 		value.addEventListener("click",function(event){
 			row = this.parentNode.parentNode;
+			console.log(row)
 			row.classList.toggle("product-item-selected");
 		});
 

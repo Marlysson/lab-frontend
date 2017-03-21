@@ -13,6 +13,7 @@
 	
 </head>
 <body>
+<div id="app">
 
 <div class="modal modal-add-item">
 	<h1 class="titulo-container">CADASTRAR PRODUTO</h1>
@@ -23,26 +24,26 @@
 
 	<form class="form">
 		<div class="item-form">
-			<input type="" name="" class="input-form" placeholder="produto">
+			<input type="" name="" class="input-form" placeholder="produto" v-model="nome">
 			<img src="static/images/produto.png">
 		</div>
 
 		<div class="item-form">
-			<input type="" name="" class="input-form" placeholder="preço">
+			<input type="" name="" class="input-form" placeholder="preço" v-model="valor">
 			<img src="static/images/preco.png">
 		</div>
 
 		<div class="item-form">
-			<input type="" name="" class="input-form" placeholder="validade">
+			<input type="" name="" class="input-form" placeholder="validade" v-model="validade">
 			<img src="static/images/validade.png">
 		</div>
 
 		<div class="item-form">
-			<input type="" name="" class="input-form" placeholder="categoria">
+			<input type="" name="" class="input-form" placeholder="categoria" v-model="categoria">
 			<div data-icon="ei-chevron-down" data-size="s" class="icon-align"></div>
 		</div>
 
-		<button class="btn btn-large">Cadastrar</button>
+		<button class="btn btn-large" v-on:click="cadastrar">Cadastrar</button>
 
 	</form>
 </div>
@@ -125,7 +126,7 @@
 
 	<span class="divisor"></span>
 
-	<table class="product-list">
+	<table class="product-list" >
 
 		<thead class="table-header">
 			<tr>
@@ -138,12 +139,11 @@
 			</tr>
 		</thead>
 
-		<tbody class="table-content" id="product-list">
+		<tbody class="table-content" v-for="produto in produtos">
 
-			<tr class="product-item" v-for="produto in produtos">
-
+			<tr class="product-item">
 				<td>
-					<input type="checkbox" name="" id="checkbox">
+					<input type="checkbox" id="checkbox">
 				</td>
 
 				<td>{{produto.nome}}</td>
@@ -151,9 +151,7 @@
 				<td>R$ {{produto.valor}}</td>
 				<td>{{produto.validade}}</td>
 
-
 				<td class="column-options">
-
 					<div class="edita_product_js">
 						<div data-icon="ei-pencil" data-size="s"></div>
 					</div>
@@ -191,9 +189,9 @@
 	</footer>
 
 </div>
-
+</div>
 <script type="text/javascript" src="static/javascript/vue.js"></script>
-<script type="text/javascript" src="static/javascript/handle_produtos.js"></script>
+<script type="text/javascript" src="static/javascript/app.js"></script>
 <script src="https://cdn.jsdelivr.net/evil-icons/1.9.0/evil-icons.min.js"></script>
 
 <script type="text/javascript" src="static/javascript/select-row-table.js"></script>
