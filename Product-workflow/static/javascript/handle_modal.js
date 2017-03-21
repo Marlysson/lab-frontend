@@ -1,14 +1,29 @@
+
+//Triggers close
 icon_close = document.querySelector(".icon-close");
+icon_back = document.querySelector(".icon-back");
+
+//Triggers action
 btn_add = document.querySelector(".add-product-js");
-modal = document.querySelector(".modal-item");
+show_produto_js = document.querySelectorAll(".show_produto_js");
+
+//Target itens
+modal_add_item = document.querySelector(".modal-add-item");
+modal_detalhe_item = document.querySelector(".modal-detalhe-item");
 
 function show_modal(){
-	modal.classList.add("modal-visible");
+	this.classList.add("modal-visible");
 }
 
-function hidden_modal(){
-	modal.classList.remove("modal-visible");
+function hidden_modal(modal){
+	this.classList.remove("modal-visible");
 }
 
-btn_add.addEventListener("click",show_modal);
-icon_close.addEventListener("click",hidden_modal);
+btn_add.addEventListener("click",show_modal.bind(modal_add_item));
+icon_close.addEventListener("click",hidden_modal.bind(modal_add_item));
+
+show_produto_js.forEach(function(elemento,indice){
+	elemento.addEventListener("click",show_modal.bind(modal_detalhe_item));
+});
+
+icon_back.addEventListener("click",hidden_modal.bind(modal_detalhe_item))

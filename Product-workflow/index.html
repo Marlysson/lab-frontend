@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="modal-item">
+<div class="modal modal-add-item">
 	<h1 class="titulo-container">CADASTRAR PRODUTO</h1>
 
 	<div class="icon-close">
@@ -45,6 +45,23 @@
 		<button class="btn btn-large">Cadastrar</button>
 
 	</form>
+</div>
+
+<div class="modal modal-detalhe-item">
+	
+	<div class="container-produto">
+		<div class="icon-back">
+			<div data-icon="ei-chevron-left" data-size="m"></div>	
+		</div>
+
+		<img src="static/images/copo-plastico.png">
+		
+	</div>
+
+	<div class="detalhes-produto">
+		
+	</div>
+	
 </div>
 
 <div class="container-produtos">
@@ -90,9 +107,19 @@
 				<td>09/08/2018</td>
 
 				<td class="column-options">
-					<div data-icon="ei-pencil" data-size="s"></div>
-					<div data-icon="ei-eye" data-size="s"></div>
-					<div data-icon="ei-trash" data-size="s"></div>
+
+					<div class="edita_product_js">
+						<div data-icon="ei-pencil" data-size="s"></div>
+					</div>
+
+					<div class="show_produto_js"">
+						<div data-icon="ei-eye" data-size="s" ></div>	
+					</div>
+
+					<div class="deleta_produto_js">
+						<div data-icon="ei-trash" data-size="s"></div>	
+					</div>
+					
 				</td>
 
 			</tr>
@@ -105,9 +132,17 @@
 				<td>10/12/2042</td>
 
 				<td class="column-options">
-					<div data-icon="ei-pencil" data-size="s"></div>
-					<div data-icon="ei-eye" data-size="s"></div>
-					<div data-icon="ei-trash" data-size="s"></div>
+					<div class="edita_product_js">
+						<div data-icon="ei-pencil" data-size="s"></div>
+					</div>
+
+					<div class="show_produto_js"">
+						<div data-icon="ei-eye" data-size="s" ></div>	
+					</div>
+
+					<div class="deleta_produto_js">
+						<div data-icon="ei-trash" data-size="s"></div>	
+					</div>
 				</td>
 			</tr>
 
@@ -119,9 +154,17 @@
 				<td>01/01/2050</td>
 
 				<td class="column-options">
-					<div data-icon="ei-pencil" data-size="s"></div>
-					<div data-icon="ei-eye" data-size="s"></div>
-					<div data-icon="ei-trash" data-size="s"></div>
+					<div class="edita_product_js">
+						<div data-icon="ei-pencil" data-size="s"></div>
+					</div>
+
+					<div class="show_produto_js"">
+						<div data-icon="ei-eye" data-size="s"></div>	
+					</div>
+
+					<div class="deleta_produto_js">
+						<div data-icon="ei-trash" data-size="s"></div>	
+					</div>
 				</td>
 			</tr>
 
@@ -142,7 +185,6 @@
 			<li class="numero-pagina">5</li>
 
 			<div data-icon="ei-chevron-right" data-size="s"></div>
-
 		</div>
 	</footer>
 
@@ -152,9 +194,7 @@
 
 <script type="text/javascript" src="static/javascript/select-row-table.js"></script>
 <script type="text/javascript" src="static/javascript/placeholder-search.js"></script>
-<script type="text/javascript" src="static/javascript/handle_modal.js">
-	
-</script>
+<script type="text/javascript" src="static/javascript/handle_modal.js"></script>
 
 </body>
 </html>

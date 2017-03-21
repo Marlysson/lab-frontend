@@ -28,7 +28,7 @@ body{
 	padding:40px 0 25px 40px;
 }
 
-.modal-item .titulo-container{
+.modal .titulo-container{
 	text-align: center;
 	font-size:21px;
 	padding:25px 0 5px;
@@ -84,6 +84,9 @@ body{
 	color:white;
 	font-weight: bold;
 	cursor:pointer;
+}
+.btn:focus{
+	outline:none;
 }
 
 .btn-medium{
@@ -160,10 +163,9 @@ body{
 	color:white;
 }
 
-.modal-item{
+.modal{
 	width:450px;
 	height:auto;
-	padding-bottom:40px;
 	background:white;
 	position:absolute;
 	top:-400px;
@@ -173,13 +175,21 @@ body{
 	transition:0.4s all;
 }
 
+.modal-add-item{
+	padding-bottom:40px;
+}
+
+.modal-detalhe-item{
+	width:550px;
+	height:395px;
+}
+
 .modal-visible{
 	top:90px;
 	opacity: 1;
 }
 
 .icon-close{
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -192,4 +202,30 @@ body{
 	top:-10px;
 	right:-10px;
 	cursor:pointer;
+}
+
+.icon-back{
+	position:absolute;
+	z-index:100;
+	color:black;
+	top:10px;
+	cursor:pointer;
+	left:10px;
+}
+
+.container-produto{
+	float:left;
+	width:50%;
+	height:100%;
+}
+
+.container-produto img{
+	width:100%;
+	height:100%;
+}
+
+.detalhes-produto{
+	width:50%;
+	height:100%;
+	float:right;
 }
