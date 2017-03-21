@@ -1,7 +1,7 @@
 
 //Triggers close
-icon_close = document.querySelector(".icon-close");
-icon_back = document.querySelector(".icon-back");
+close_modal_add = document.querySelector(".add_item");
+close_modal_detalhe = document.querySelector(".detalhe_item");
 
 //Triggers action
 btn_add = document.querySelector(".add-product-js");
@@ -20,10 +20,10 @@ function hidden_modal(modal){
 }
 
 btn_add.addEventListener("click",show_modal.bind(modal_add_item));
-icon_close.addEventListener("click",hidden_modal.bind(modal_add_item));
+close_modal_add.addEventListener("click",hidden_modal.bind(modal_add_item));
 
 show_produto_js.forEach(function(elemento,indice){
 	elemento.addEventListener("click",show_modal.bind(modal_detalhe_item));
 });
 
-icon_back.addEventListener("click",hidden_modal.bind(modal_detalhe_item))
+close_modal_detalhe.addEventListener("click",hidden_modal.bind(modal_detalhe_item))
